@@ -33,3 +33,14 @@ JsonConverter StringConverter
 서비스: 핵심 비즈니스 로직 구현
 리포지토리: 데이터베이스에 접근, 도메인 객체를 DB에 저장하고 관리
 도메인: 비즈니스 도메인 객체 (eg. 회원 주문, 쿠폰 등 주로 데이터베이스에 저장하고 관리됨)
+
+
+test 순서는 보장이 되지 않음 (의존 관계 없이 설계)
+> test method가 끝날 때마다 clear해주는 작업 필요
+
+TTD: 테스트 주도 개발
+test cast 먼저 만들고, 그에 맞게 개발
+
+
+Service class는 비즈니스 의존적 설계
+Repository는 기계적으로 단순하게 네이밍
