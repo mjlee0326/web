@@ -24,7 +24,7 @@ class MemoryMemberRepositoryTest {
     public void save(){
         Member member = new Member();
         member.setName("spring");
-        repository.save(member);
+        repository.save(member); //내일부터 다시 공부,,
         Member result = repository.findById(member.getId()).get();
         //optional에서 값을 꺼낼때는 get() 사용 가능
         //Assertions.assertEquals(member, result); //expect, object
