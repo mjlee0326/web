@@ -126,3 +126,14 @@ DB가 id를 자동으로 생성해주는 것을 *identity* 라고 함
 JPA를 사용하려면 EntityManager를 주입받아야 한다.
 
 
+#### Spring Data JPA
+
+interface만 만들어 놓고, spring data가 제공하는 JpaRepository를 extends 해두면, spring data가 interface에 대한 구현체를 알아서 만들고 spring bean에 등록
+
+우리는 injection해서 받을 수 있음
+
+>public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
+    @Override
+    Optional<Member> findByName(String name);
+}
+
