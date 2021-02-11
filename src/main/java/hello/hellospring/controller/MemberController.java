@@ -40,7 +40,7 @@ public class MemberController {
 
     @GetMapping("/members")
     public String list(Model model){
-        //ctrl + alt + v 자동 리턴 변수
+        //ctrl + alt + V 자동 리턴값 받을 변수 지정
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
 

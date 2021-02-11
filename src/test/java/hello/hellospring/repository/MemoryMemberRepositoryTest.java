@@ -32,8 +32,6 @@ class MemoryMemberRepositoryTest {
     }
     //rename shift + F6
     @Test
-    //ff
-    //f
     public void findByName(){
         Member member1 = new Member();
         member1.setName("spring1");

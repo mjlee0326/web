@@ -41,6 +41,7 @@ test 순서는 보장이 되지 않음 (의존 관계 없이 설계)
 TTD: 테스트 주도 개발
 test cast 먼저 만들고, 그에 맞게 개발
 
+ctrl + shift + T 하면 바로 test case 생성
 
 Service class는 비즈니스 의존적 설계
 Repository는 기계적으로 단순하게 네이밍
@@ -61,3 +62,27 @@ DI: 필드 주입, setter 주입, 생성자 주입(권장*)
 
 value 객체를 name이름으로 추가한다.
 뷰 코드에서는 name으로 지정한 이름을 통해서 value를 사용
+
+
+h2:tcp//localhost/~/test
+: 파일 직접 접근이 아니라 소켓을 통해서 접근
+: 여러 곳에서 접근 가능:)
+
+### JDBC
+자바는 DB랑 붙으려면 이 드라이브가 만드시 있어야 함
+
+alt + insert: generate (파일/디렉토리 새로 생성하는 거랑 단축키 동일)
+ctrl + alt + V : 자동으로 리턴값 받을 변수 지정
+
+
+객체 지향-다형성 활용(interface를 통해서 바꿔끼기) -> spring이 잘되어 있음
+기존의 코드는 안 고치고 application을 설정하는 코드(어셈블리)만 건들면 됨
+
+MemberService는 MemberRepository에 의존
+
+MemberRepository는 구현체로 MemoryMemberRepository와 JdbcMemberRepository가 있음
+
+OCP(Open-Closed Priciple): 개방 폐쇄 원칙
+: 확장에는 열려있고, 수정, 변경에는 닫혀있다.
+
+스프링의 DI(Dependency Injection)을 사용하면 기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경할 수 있음
