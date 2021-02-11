@@ -72,6 +72,7 @@ h2:tcp//localhost/~/test
 자바는 DB랑 붙으려면 이 드라이브가 만드시 있어야 함
 
 alt + insert: generate (파일/디렉토리 새로 생성하는 거랑 단축키 동일)
+
 ctrl + alt + V : 자동으로 리턴값 받을 변수 지정
 
 
@@ -94,3 +95,16 @@ Database에는 기본적으로 transaction이라는 개념이 존재
 @Transactional : 테스트 케이스에 이 애노테이션이 있으면, 테스트 시작 전에 트랜잭션을 시작하고,
 테스트 완료 후에 항상 롤백한다. 이렇게 하면 DB에 데이터가 남지 않으므로 다음 테스트에 영향을 주지
 않는다.
+
+#### JdbcTemplate (Jdbc는 실무에서도 많이 사용)
+
+스프링 JdbcTemplate과 MyBatis같은 라이브러리는 JDBC AP에서 본 반복 코드를 대부분 제거해준다. 하지만 SQL은 직접 작성해야 한다.
+(eg. 
+	conn = getConnection();
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+이런게 계속 반복되었는데, 이런 것의 반복 코드를 제거해줌)
+
+JDBC 긴 코드를 JDBC Template을 이용해서 확 줄일 수 있음
+
+Alt + enter : replace lambda
