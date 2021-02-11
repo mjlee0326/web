@@ -6,12 +6,17 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.awt.*;
 import java.util.List;
 import java.util.Optional;
 
 //@Service
+
+//회원가입시 필요
+//jpa는 join을 할 때의 데이터 변경이 모두 transaction 안에서 실행되어야 함
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;

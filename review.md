@@ -107,4 +107,22 @@ Database에는 기본적으로 transaction이라는 개념이 존재
 
 JDBC 긴 코드를 JDBC Template을 이용해서 확 줄일 수 있음
 
+
 Alt + enter : replace lambda
+
+#### JPA (interface)
+JPA 사용하면 SQL query까지 자동으로 처리
+
+객체 중심 설계 가능
+
+properties에서
+
+spring.jpa.show-sql=true //jpa가 날리는 sql을 볼 수 있음
+
+JPA: 객체와 ORM 기능(Object Relational Mapping)
+
+DB가 id를 자동으로 생성해주는 것을 *identity* 라고 함
+
+JPA를 사용하려면 EntityManager를 주입받아야 한다.
+
+
