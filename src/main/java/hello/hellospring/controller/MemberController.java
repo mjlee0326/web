@@ -4,8 +4,11 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 //스프링 컨테이너에서 스프링 빈이 관리됨
 //컨트롤러는 어차피 스프링이 관리
@@ -33,6 +36,15 @@ public class MemberController {
 
         return "redirect:/"; //홈 화면으로 보냄
 
+    }
+
+    @GetMapping("/members")
+    public String list(Model model){
+        //ctrl + alt + v 자동 리턴 변수
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+
+        return "members/memberList";
     }
 
 }

@@ -36,7 +36,7 @@ JsonConverter StringConverter
 
 
 test 순서는 보장이 되지 않음 (의존 관계 없이 설계)
-> test method가 끝날 때마다 clear해주는 작업 필요
+ test method가 끝날 때마다 clear해주는 작업 필요
 
 TTD: 테스트 주도 개발
 test cast 먼저 만들고, 그에 맞게 개발
@@ -54,3 +54,10 @@ DI: 필드 주입, setter 주입, 생성자 주입(권장*)
 
 
 요청이 오면, 스프링 컨테이너 안에서 관련 컨트롤러를 찾고, 없으면 static 파일을 찾음
+
+## Model.addAttribute 관련
+
+> Model addAttribute(String name, Object value)
+
+value 객체를 name이름으로 추가한다.
+뷰 코드에서는 name으로 지정한 이름을 통해서 value를 사용

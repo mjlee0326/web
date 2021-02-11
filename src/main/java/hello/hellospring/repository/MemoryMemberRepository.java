@@ -9,7 +9,7 @@ import java.util.*;
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
-    private static long sequence = 0L; //sequence는 0,1,2등 키 값을 설정
+    private static long sequence = 0L; //sequence는 0,1,2.. 키 값을 설정
 
     @Override
     public Member save(Member member) {
