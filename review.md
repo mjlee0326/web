@@ -137,3 +137,6 @@ interface만 만들어 놓고, spring data가 제공하는 JpaRepository를 exte
     Optional<Member> findByName(String name);
 }
 
+
+#### AOP(Aspect Oriented Programing)
+공통 관심 사항과 핵심 관심 사항 분리
