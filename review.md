@@ -145,3 +145,6 @@ interface만 만들어 놓고, spring data가 제공하는 JpaRepository를 exte
 슨생님이 가장 좋아하는 단축키
 
 ctrl + alt +  shift + T : inline
+
+
+AOP는 가짜 스프링 bean '프록시'를 띄우고, joinPoint.proceed( ) 호출 시 실제 호출
